@@ -1,15 +1,26 @@
 .hero {
   background: #0e131c;
   color: #fff;
-  padding: 110px 0 100px;
+  padding: 110px 32px 100px;
+  box-sizing: border-box;
 }
 
+/* Each EDS block row should remain full width */
 .hero > div {
-  width: min(1200px, calc(100% - 48px));
-  margin: 0 auto;
+  width: 100%;
+  margin: 0;
+  padding: 0;
 }
 
-/* Reset boilerplate heading/paragraph positioning */
+/* Constrain the actual content inside each row */
+.hero > div > div {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+/* Reset global boilerplate styles inside Hero */
 .hero h1,
 .hero h2,
 .hero h3,
@@ -27,19 +38,19 @@
   letter-spacing: 0.08em;
   line-height: 1.4;
   text-transform: uppercase;
-  margin: 0 0 24px 0 !important;
+  margin: 0 0 24px !important;
 }
 
 /* Name */
 .hero .hero-title,
 .hero .hero-title h1 {
   color: #fff;
-  font-size: clamp(52px, 7vw, 82px);
+  font-size: clamp(52px, 6vw, 78px);
   line-height: 0.98;
   font-weight: 700;
   max-width: 900px !important;
   width: 100% !important;
-  margin: 0 0 24px 0 !important;
+  margin: 0 0 24px !important;
   text-align: left !important;
 }
 
@@ -52,7 +63,7 @@
   font-weight: 600;
   max-width: 800px !important;
   width: 100% !important;
-  margin: 0 0 20px 0 !important;
+  margin: 0 0 20px !important;
   text-align: left !important;
 }
 
@@ -64,7 +75,7 @@
   line-height: 1.7;
   max-width: 760px !important;
   width: 100% !important;
-  margin: 0 0 32px 0 !important;
+  margin: 0 0 32px !important;
   text-align: left !important;
 }
 
@@ -91,23 +102,23 @@
   text-decoration: none;
 }
 
-.hero .hero-actions a:hover {
-  opacity: 0.9;
-}
-
 .hero .hero-actions a + a {
   background: transparent;
   border-color: #fff;
 }
 
+.hero .hero-actions a:hover {
+  opacity: 0.9;
+}
+
 /* Mobile */
 @media (width <= 768px) {
   .hero {
-    padding: 80px 0;
+    padding: 80px 24px;
   }
 
-  .hero > div {
-    width: calc(100% - 48px);
+  .hero > div > div {
+    max-width: none;
   }
 
   .hero .hero-title,
