@@ -7,6 +7,7 @@
 .hero > div {
   width: min(1200px, calc(100% - 48px));
   margin: 0 auto;
+  text-align: left;
 }
 
 .hero-eyebrow {
@@ -49,6 +50,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
+  align-items: center;
 }
 
 .hero-actions a {
@@ -63,10 +65,6 @@
   color: #fff;
   font-weight: 600;
   text-decoration: none;
-}
-
-.hero-actions a:hover {
-  opacity: 0.9;
 }
 
 .hero-actions a + a {
@@ -103,4 +101,11 @@
   .hero-actions a {
     width: 100%;
   }
+}
+
+.hero-title,
+.hero-role,
+.hero-description {
+  margin-left: 0;
+  margin-right: 0;
 }
