@@ -328,7 +328,7 @@ main .section.highlight {
 /* Resume - About section */
 
 main .section.about {
-  background-color: #ffffff;
+  background-color: #fff;
   margin: 0;
   padding: 100px 0;
 }
@@ -365,7 +365,7 @@ main .section.about p {
   margin: 0;
 }
 
-@media (max-width: 768px) {
+@media (width <= 768px) {
   main .section.about {
     padding: 72px 0;
   }
