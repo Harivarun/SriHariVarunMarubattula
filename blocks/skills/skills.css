@@ -1,7 +1,7 @@
 main .skills-container {
   margin: 0;
   padding: 56px 0;
-  background-color: #081323;
+  background-color: #08111f;
 }
 
 .skills {
@@ -64,13 +64,26 @@ main .skills-container {
     padding: 56px 0;
   }
 
+  .skills .skills-eyebrow,
+  .skills .skills-eyebrow p {
+    font-size: 12px;
+  }
+
   .skills .skills-title,
   .skills .skills-title p,
   .skills .skills-title h2 {
-    font-size: 32px;
+    font-size: 28px;
+    line-height: 1.25;
   }
 
   .skills .skills-cards {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (width >= 769px) {
+  main .skills-container > div {
+    max-width: 1120px;
+    padding: 0;
   }
 }

@@ -1,0 +1,139 @@
+main .experience-container {
+  margin: 0;
+  padding: 56px 0;
+  background-color: #0d1829;
+}
+
+.experience {
+  color: #f5f7fa;
+}
+
+.experience .experience-eyebrow,
+.experience .experience-eyebrow p {
+  margin: 0 0 20px;
+  color: #67b7ff;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.54;
+  text-transform: uppercase;
+}
+
+.experience .experience-title,
+.experience .experience-title p,
+.experience .experience-title h2 {
+  margin: 0 0 20px;
+  color: #f5f7fa;
+  font-size: 38px;
+  font-weight: 700;
+  line-height: 1.37;
+}
+
+.experience .experience-items {
+  display: grid;
+  gap: 10px;
+  max-width: 920px;
+}
+
+.experience .experience-item {
+  display: grid;
+  grid-template-columns: 120px minmax(0, 1fr);
+  gap: 24px;
+  align-items: start;
+}
+
+.experience .experience-period,
+.experience .experience-period p {
+  margin: 0;
+  color: #67b7ff;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 2.29;
+}
+
+.experience .experience-card {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-height: 0;
+  box-sizing: border-box;
+  border-radius: 12px;
+  padding: 20px 24px;
+  background-color: #111b2c;
+}
+
+.experience .experience-card p {
+  margin: 0;
+}
+
+.experience .experience-role,
+.experience .experience-role p {
+  margin: 0;
+  color: #f5f7fa;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.experience .experience-company,
+.experience .experience-company p {
+  margin: 0;
+  color: #9faec0;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.experience .experience-technologies,
+.experience .experience-technologies p {
+  margin: 4px 0 0;
+  color: #67b7ff;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.experience .experience-summary,
+.experience .experience-summary p {
+  margin: 4px 0 0;
+  color: #c9d2df;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.experience .experience-detail,
+.experience .experience-detail p {
+  color: #c9d2df;
+  font-size: 14px;
+  line-height: 1.21;
+}
+
+@media (width >= 769px) {
+  main .experience-container > div {
+    max-width: 1120px;
+    padding: 0;
+  }
+}
+
+@media (width <= 768px) {
+  .experience .experience-eyebrow,
+  .experience .experience-eyebrow p {
+    font-size: 12px;
+  }
+
+  .experience .experience-title,
+  .experience .experience-title p,
+  .experience .experience-title h2 {
+    font-size: 28px;
+    line-height: 1.25;
+  }
+
+  .experience .experience-item {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .experience .experience-period,
+  .experience .experience-period p {
+    line-height: 1.43;
+  }
+}
