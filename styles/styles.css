@@ -447,11 +447,9 @@ main .projects .cards > ul {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 16px;
-
   width: 100%;
   margin: 0;
   padding: 0;
-
   list-style: none;
 }
 
@@ -462,20 +460,14 @@ main .projects .cards > ul {
 main .projects .cards > ul > li {
   display: flex;
   flex-direction: column;
-
   min-width: 0;
   min-height: 220px;
-
   margin: 0;
   padding: 0;
-
   box-sizing: border-box;
-
   border: 1px solid #1b2a40;
   border-radius: 12px;
-
   background: #111c2e;
-
   overflow: hidden;
 }
 
@@ -493,9 +485,7 @@ main .projects .cards > ul > li > .cards-card-body {
 
 main .projects .cards > ul > li > .cards-card-body:nth-child(1) {
   padding-top: 20px;
-
   color: #f5f7fa;
-
   font-size: 18px;
   font-weight: 600;
   line-height: 1.35;
@@ -505,9 +495,7 @@ main .projects .cards > ul > li > .cards-card-body:nth-child(1) {
 
 main .projects .cards > ul > li > .cards-card-body:nth-child(2) {
   padding-top: 12px;
-
   color: #67b7ff;
-
   font-size: 12px;
   font-weight: 600;
   line-height: 1.5;
@@ -518,9 +506,7 @@ main .projects .cards > ul > li > .cards-card-body:nth-child(2) {
 main .projects .cards > ul > li > .cards-card-body:nth-child(3) {
   padding-top: 12px;
   padding-bottom: 20px;
-
   color: #aeb9c8;
-
   font-size: 13px;
   font-weight: 400;
   line-height: 1.55;
@@ -536,7 +522,7 @@ main .projects .cards .cards-card-image {
    Tablet
    --------------------------------- */
 
-@media (max-width: 900px) {
+@media (width <= 900px) {
   main .projects > .default-content-wrapper,
   main .projects > .cards-wrapper {
     width: calc(100% - 48px);
@@ -551,7 +537,7 @@ main .projects .cards .cards-card-image {
    Mobile
    --------------------------------- */
 
-@media (max-width: 600px) {
+@media (width <= 600px) {
   main .projects {
     padding: 64px 0 72px;
   }
