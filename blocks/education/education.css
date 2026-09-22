@@ -1,0 +1,74 @@
+.education-container {
+  margin: 0;
+  padding: 56px 0;
+  background-color: #0d1829;
+}
+
+.education {
+  color: #f5f7fa;
+  display: grid;
+  gap: 10px;
+  max-width: 920px;
+}
+
+.education-item {
+  display: grid;
+  grid-template-columns: 120px minmax(0, 1fr);
+  gap: 24px;
+  align-items: start;
+}
+
+/* Period */
+.education-period p {
+  margin: 0;
+  color: #67b7ff;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 2.29;
+}
+
+/* Card */
+.education-card {
+  display: flex;
+  flex-direction: column;
+  border-radius: 12px;
+  background-color: #111b2c;
+  overflow: hidden;
+}
+
+/* Degree */
+.education-degree {
+  padding: 20px 24px 4px;
+}
+
+.education-degree p {
+  margin: 0;
+  color: #f5f7fa;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+/* Institution */
+.education-institution {
+  padding: 4px 24px 20px;
+}
+
+.education-institution p {
+  margin: 0;
+  color: #9faec0;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+@media (width <= 768px) {
+  .education-item {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .education-period p {
+    line-height: 1.43;
+  }
+}

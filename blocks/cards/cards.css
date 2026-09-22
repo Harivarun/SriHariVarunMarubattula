@@ -25,3 +25,34 @@
   aspect-ratio: 4 / 3;
   object-fit: cover;
 }
+
+
+/* Certifications variant — dark theme override */
+.cards.certifications > ul {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.cards.certifications > ul > li {
+  background-color: #111b2c;
+  border: none;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 20px 24px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.cards.certifications .cards-card-body {
+  margin: 0;
+}
+
+.cards.certifications .cards-card-body p {
+  margin: 0;
+}
+
+.cards.certifications .cards-card-image {
+  display: none;
+}
