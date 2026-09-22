@@ -564,3 +564,174 @@ main .projects .cards .cards-card-image {
     min-height: 0;
   }
 }
+
+/* =========================================================
+   CERTIFICATIONS
+   ========================================================= */
+
+main .certifications {
+  background-color: #0d1829;
+  color: #f5f7fa;
+  margin: 0;
+  padding: 56px 0;
+}
+
+main .certifications > .default-content-wrapper,
+main .certifications > .cards-wrapper {
+  width: min(1120px, calc(100% - 48px));
+  max-width: 1120px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 0;
+  padding-right: 0;
+  box-sizing: border-box;
+}
+
+/* ---------------------------------
+   Heading
+   --------------------------------- */
+
+main .certifications > .default-content-wrapper {
+  margin-bottom: 32px;
+}
+
+main .certifications > .default-content-wrapper p:first-child {
+  margin: 0 0 16px;
+  color: #67b7ff;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.54;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+main .certifications > .default-content-wrapper h2 {
+  margin: 0 0 20px;
+  color: #f5f7fa;
+  font-size: 38px;
+  font-weight: 700;
+  line-height: 1.37;
+}
+
+/* ---------------------------------
+   Cards grid — 2 columns
+   --------------------------------- */
+
+main .certifications .cards.certifications > ul {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* ---------------------------------
+   Card — matches experience-card
+   --------------------------------- */
+
+main .certifications .cards.certifications > ul > li {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+  margin: 0;
+  padding: 20px 24px;
+  box-sizing: border-box;
+  border-radius: 12px;
+  background-color: #111b2c;
+  overflow: hidden;
+}
+
+/* ---------------------------------
+   Card cells
+   --------------------------------- */
+
+main .certifications .cards.certifications > ul > li > .cards-card-body {
+  margin: 0;
+}
+
+main .certifications .cards.certifications > ul > li > .cards-card-body p {
+  margin: 0;
+}
+
+/* Cert title — matches experience-role */
+
+main .certifications .cards.certifications > ul > li > .cards-card-body:nth-child(1) p {
+  color: #f5f7fa;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+/* Issuer — matches experience-company */
+
+main .certifications .cards.certifications > ul > li > .cards-card-body:nth-child(2) p {
+  margin-top: 4px;
+  color: #9faec0;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.4;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Dates, credential ID, link, skills — matches experience-summary */
+
+main .certifications .cards.certifications > ul > li > .cards-card-body:nth-child(3) p {
+  margin-top: 4px;
+  color: #c9d2df;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+main .certifications .cards.certifications > ul > li > .cards-card-body:nth-child(3) a:any-link {
+  color: #67b7ff;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+main .certifications .cards.certifications > ul > li > .cards-card-body:nth-child(3) a:hover {
+  text-decoration: underline;
+}
+
+/* Hide card images */
+
+main .certifications .cards.certifications .cards-card-image {
+  display: none;
+}
+
+/* ---------------------------------
+   Tablet
+   --------------------------------- */
+
+@media (width <= 900px) {
+  main .certifications > .default-content-wrapper,
+  main .certifications > .cards-wrapper {
+    width: calc(100% - 48px);
+  }
+
+  main .certifications .cards.certifications > ul {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ---------------------------------
+   Mobile
+   --------------------------------- */
+
+@media (width <= 768px) {
+  main .certifications > .default-content-wrapper p:first-child {
+    font-size: 12px;
+  }
+
+  main .certifications > .default-content-wrapper h2 {
+    font-size: 28px;
+    line-height: 1.25;
+  }
+
+  main .certifications .cards.certifications > ul {
+    gap: 8px;
+  }
+}
