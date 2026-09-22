@@ -1,30 +1,39 @@
 export default function decorate(block) {
   const rows = [...block.children];
+  const [eyebrow, title, ...itemRows] = rows;
 
-  block.innerHTML = '';
+  if (eyebrow) eyebrow.classList.add('education-eyebrow');
+  if (title) title.classList.add('education-title');
 
-  rows.forEach((row) => {
-    const cols = [...row.children];
-    const item = document.createElement('div');
-    item.classList.add('education-item');
+  if (itemRows.length) {
+    const items = document.createElement('div');
+    items.className = 'education-items';
 
-    const period = document.createElement('div');
-    period.classList.add('education-period');
-    period.innerHTML = cols[0]?.innerHTML || '';
+    itemRows.forEach((row) => {
+      const cells = [...row.children];
+      const [period, degree, institution] = cells;
 
-    const card = document.createElement('div');
-    card.classList.add('education-card');
+      row.classList.add('education-item');
 
-    const degree = document.createElement('div');
-    degree.classList.add('education-degree');
-    degree.innerHTML = cols[1]?.innerHTML || '';
+      if (period) period.classList.add('education-period');
 
-    const institution = document.createElement('div');
-    institution.classList.add('education-institution');
-    institution.innerHTML = cols[2]?.innerHTML || '';
+      const card = document.createElement('div');
+      card.className = 'education-card';
 
-    card.append(degree, institution);
-    item.append(period, card);
-    block.append(item);
-  });
+      if (degree) {
+        degree.classList.add('education-degree');
+        card.append(degree);
+      }
+
+      if (institution) {
+        institution.classList.add('education-institution');
+        card.append(institution);
+      }
+
+      row.append(card);
+      items.append(row);
+    });
+
+    block.append(items);
+  }
 }

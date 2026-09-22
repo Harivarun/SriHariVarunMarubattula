@@ -6,20 +6,43 @@
 
 .education {
   color: #f5f7fa;
+}
+
+.education .education-eyebrow,
+.education .education-eyebrow p {
+  margin: 0 0 20px;
+  color: #67b7ff;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.54;
+  text-transform: uppercase;
+}
+
+.education .education-title,
+.education .education-title p,
+.education .education-title h2 {
+  margin: 0 0 20px;
+  color: #f5f7fa;
+  font-size: 38px;
+  font-weight: 700;
+  line-height: 1.37;
+}
+
+.education .education-items {
   display: grid;
   gap: 10px;
   max-width: 920px;
 }
 
-.education-item {
+.education .education-item {
   display: grid;
   grid-template-columns: 120px minmax(0, 1fr);
   gap: 24px;
   align-items: start;
 }
 
-/* Period */
-.education-period p {
+.education .education-period,
+.education .education-period p {
   margin: 0;
   color: #67b7ff;
   font-size: 14px;
@@ -27,21 +50,22 @@
   line-height: 2.29;
 }
 
-/* Card */
-.education-card {
+.education .education-card {
   display: flex;
   flex-direction: column;
+  gap: 2px;
+  box-sizing: border-box;
   border-radius: 12px;
+  padding: 20px 24px;
   background-color: #111b2c;
-  overflow: hidden;
 }
 
-/* Degree */
-.education-degree {
-  padding: 20px 24px 4px;
+.education .education-card p {
+  margin: 0;
 }
 
-.education-degree p {
+.education .education-degree,
+.education .education-degree p {
   margin: 0;
   color: #f5f7fa;
   font-size: 20px;
@@ -49,12 +73,8 @@
   line-height: 1.2;
 }
 
-/* Institution */
-.education-institution {
-  padding: 4px 24px 20px;
-}
-
-.education-institution p {
+.education .education-institution,
+.education .education-institution p {
   margin: 0;
   color: #9faec0;
   font-size: 14px;
@@ -62,13 +82,33 @@
   line-height: 1.4;
 }
 
+@media (width >= 769px) {
+  .education-container > div {
+    max-width: 1120px;
+    padding: 0;
+  }
+}
+
 @media (width <= 768px) {
-  .education-item {
+  .education .education-eyebrow,
+  .education .education-eyebrow p {
+    font-size: 12px;
+  }
+
+  .education .education-title,
+  .education .education-title p,
+  .education .education-title h2 {
+    font-size: 28px;
+    line-height: 1.25;
+  }
+
+  .education .education-item {
     grid-template-columns: 1fr;
     gap: 8px;
   }
 
-  .education-period p {
+  .education .education-period,
+  .education .education-period p {
     line-height: 1.43;
   }
 }
