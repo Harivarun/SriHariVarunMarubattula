@@ -1,36 +1,56 @@
-.education-container {
+main .education-container {
   margin: 0;
-  padding: 56px 0;
-  background-color: #0d1829;
+  padding: 72px 0 80px;
+  background: #08111f;
 }
 
 .education {
   color: #f5f7fa;
 }
 
+
+main .education > .default-content-wrapper p:first-child {
+  margin: 0 0 16px;
+  color: #67b7ff;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.4;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+main .education > .default-content-wrapper p:nth-child(2) {
+  margin: 0;
+  color: #f5f7fa;
+  font-size: 38px;
+  font-weight: 700;
+  line-height: 1.15;
+}
+
 .education .education-eyebrow,
 .education .education-eyebrow p {
-  margin: 0 0 20px;
+  margin: 0 0 16px;
   color: #67b7ff;
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 600;
-  line-height: 1.54;
+  line-height: 1.4;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
 }
 
 .education .education-title,
 .education .education-title p,
 .education .education-title h2 {
-  margin: 0 0 20px;
+  margin: 0 0 32px;
   color: #f5f7fa;
   font-size: 38px;
   font-weight: 700;
-  line-height: 1.37;
+  line-height: 1.15;
 }
 
 .education .education-items {
   display: grid;
-  gap: 10px;
+  gap: 16px;
   max-width: 920px;
 }
 
@@ -54,10 +74,12 @@
   display: flex;
   flex-direction: column;
   gap: 2px;
+  min-height: 0;
   box-sizing: border-box;
+  border: 1px solid #1b2a40;
   border-radius: 12px;
   padding: 20px 24px;
-  background-color: #111b2c;
+  background: #111c2e;
 }
 
 .education .education-card p {
@@ -76,30 +98,38 @@
 .education .education-institution,
 .education .education-institution p {
   margin: 0;
-  color: #9faec0;
+  color: #aeb9c8;
   font-size: 14px;
-  font-weight: 600;
-  line-height: 1.4;
+  font-weight: 400;
+  line-height: 1.5;
 }
 
 @media (width >= 769px) {
-  .education-container > div {
+  main .education-container > div {
     max-width: 1120px;
     padding: 0;
   }
 }
 
-@media (width <= 768px) {
-  .education .education-eyebrow,
-  .education .education-eyebrow p {
-    font-size: 12px;
+@media (width <= 900px) {
+  main .education-container > div {
+    width: calc(100% - 48px);
+  }
+}
+
+@media (width <= 600px) {
+  main .education-container {
+    padding: 64px 0 72px;
+  }
+
+  main .education-container > div {
+    width: calc(100% - 32px);
   }
 
   .education .education-title,
   .education .education-title p,
   .education .education-title h2 {
-    font-size: 28px;
-    line-height: 1.25;
+    font-size: 30px;
   }
 
   .education .education-item {
