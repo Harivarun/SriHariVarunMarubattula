@@ -14,21 +14,24 @@ export default function decorate(block) {
       const [period, degree, institution] = cells;
 
       row.classList.add('education-item');
+      row.innerHTML = '';
 
-      if (period) period.classList.add('education-period');
+      if (period) {
+        period.classList.add('education-period');
+        row.append(period);
+      }
 
       const card = document.createElement('div');
       card.className = 'education-card';
 
-      if (degree) {
-        degree.classList.add('education-degree');
-        card.append(degree);
-      }
+      const addCardCell = (cell, className) => {
+        if (!cell) return;
+        cell.classList.add(className);
+        card.append(cell);
+      };
 
-      if (institution) {
-        institution.classList.add('education-institution');
-        card.append(institution);
-      }
+      addCardCell(degree, 'education-degree');
+      addCardCell(institution, 'education-institution');
 
       row.append(card);
       items.append(row);
